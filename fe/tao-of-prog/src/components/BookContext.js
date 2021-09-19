@@ -9,7 +9,7 @@ export default class BookContextProvider extends Component {
     state = {
         booksSummary: null,
         selectedBook: null,
-        donated: false
+        donated: true
     }
 
     componentDidMount() {

@@ -1,9 +1,26 @@
-import React from 'react'
+import { BookContextConsumer } from './BookContext';
+import BookSummary from './BookSummary';
 
-export default function BooksList() {
-    return (
-        <div>
-            <h1>Hello From Book List</h1>
-        </div>
-    )
-}
+const BooksList = () => (
+
+    <BookContextConsumer> 
+    {
+        ({booksSummary}) => {
+            console.log("BooksList:", booksSummary);
+
+            return (
+                null === booksSummary ? <h1>Loading...</h1> :
+                <div className = "bg-dark py-3">
+                {
+                    booksSummary.books.map((aBook) => { 
+                        return <BookSummary key={aBook.booknum} book={aBook}/> 
+                    })
+                }
+                </div>
+            );
+        }
+    }
+    </BookContextConsumer>
+);
+
+export default BooksList;

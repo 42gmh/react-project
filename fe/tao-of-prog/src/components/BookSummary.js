@@ -9,15 +9,15 @@ const BookSummary = ({book}) => (
                 console.log("BookSummary:", value);
                 return (
                 <Link to="/book" className="text-decoration-none link-dark">
-                <div key={book.booknum} className="card px-5 mx-3 mb-3 bg-light" onClick={() => value.handleBookSelection(book.booknum)}>
-                        <div className="card-body">
-                            <h3 className="card-title">{book.title}</h3>
-                                <blockquote className="blockquote mb-0">
-                                    <p className="card-text text-center">{book.epigraph}</p>
-                                </blockquote>
-                        </div>
-                </div>
-            </Link> 
+                    <div key={book.booknum} className="card px-5 mx-3 mb-3 bg-light" onClick={() => value.handleBookSelection(book.booknum)}>
+                            <div className="card-body">
+                                <h3 className="card-title">{book.title}</h3>
+                                    <blockquote className="blockquote mb-0">
+                                        <p className="card-text text-center">{book.epigraph}</p>
+                                    </blockquote>
+                            </div>
+                    </div>
+                </Link> 
                 ) 
             }
         }

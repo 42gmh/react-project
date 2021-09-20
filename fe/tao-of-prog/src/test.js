@@ -23,7 +23,7 @@ export const testData = {
         {
             "title": "Coding",
             "booknum": "4",
-            "epigraph": "Thus spake the Master Programmer: A well poorly-written program is its own Hell."
+            "epigraph": "Thus spake the Master Programmer: A well-written program is its own Heaven; a poorly-written program is its own Hell."
         },
         {
             "title": "Maintenance",
@@ -53,20 +53,39 @@ export const testData = {
     ]
 }
 
-export const selectedBook = {
-    "booknum": "4",
-    "epigraph": "Thus spake the Master Programmer: A well poorly-written program is its own Hell.",
-    "title": "Coding",
+export const selectedBook =  {
+    "booknum": "6",
+    "epigraph": "Thus spake the Master Programmer: Let the programmers be many and the managers few -- then all will be productive.",
+    "title": "Management",
     "sections": [
         {
             "id": "1",
             "stanzas": [
                 {
                     "lines": [
-                        "A program should be light and agile, its subroutines connected like a string of pearls.  The spirit and intent of the program should be retained throughout.  There should be neither too little nor too much. Neither needless loops nor useless variables; neither lack of structure nor overwhelming rigidity.",
-                        "A program should follow the \"Law of Least Astonishment\".  What is this law?  It is simply that the program should always respond to the users in the way that least astonishes them.",
-                        "A program, no matter how complex, should act as a single unit.  The program should be directed by the logic within rather than by outward appearances.",
-                        "If the program fails in these requirements, it will be in a state of disorder and confusion.  The only way to correct this is to rewrite the program."
+                        "When managers hold endless meetings, the programmers write games.",
+                        "When accountants speak of quarterly profits, the development budget is about to be cut.",
+                        "When senior scientists talk blue sky, the clouds are about to roll in."
+                    ],
+                    "type": "block"
+                },
+                {
+                    "lines": [
+                        "Truly, this is not the Tao of Programming."
+                    ],
+                    "type": "plain"
+                },
+                {
+                    "lines": [
+                        "When managers make commitments, game programs are ignored.",
+                        "When accountants make long-range plans, harmony and order are about to be restored.",
+                        "When senior scientists address the problems at hand, the problems will soon be solved."
+                    ],
+                    "type": "block"
+                },
+                {
+                    "lines": [
+                        "Truly, this is the Tao of Programming."
                     ],
                     "type": "plain"
                 }
@@ -77,13 +96,12 @@ export const selectedBook = {
             "stanzas": [
                 {
                     "lines": [
-                        "A novice asked the Master: \"I have a program that sometimes runs and sometimes aborts.  I have followed the rules of programming, yet I am totally baffled.  What is the reason for this?\"",
-                        "The Master replied: \"You are confused because you do not understand Tao.  Only a fool expects rational behavior from his fellow humans. Why do you expect it from a machine that humans have constructed? Computers simulate determinism; only Tao is perfect.",
-                        "The rules of programming are transitory; only Tao is eternal. Therefore, you must contemplate Tao before you receive Enlightenment.\"",
-                        "\"But how will I know when I have received Enlightenment?\"  asked the novice.",
-                        "\"Your program will run correctly,\" replied the Master."
+                        "Why are programmers non-productive?  Because their time is wasted in meetings.",
+                        "Why are programmers rebellious?  Because the management interferes too much.",
+                        "Why are the programmers resigning one by one?  Because they are burnt out.",
+                        "Having worked for poor management, they no longer value their jobs."
                     ],
-                    "type": "plain"
+                    "type": "block"
                 }
             ]
         },
@@ -92,14 +110,10 @@ export const selectedBook = {
             "stanzas": [
                 {
                     "lines": [
-                        "The Master was explaining the nature of Tao to one of his novices.",
-                        "\"The Tao is embodied in all software -- regardless of how insignificant,\" said the Master.",
-                        "\"Is the Tao in a hand-held calculator?\" asked the novice.",
-                        "\"It is,\" came the reply.",
-                        "\"Is the Tao in a video game?\" asked the novice.",
-                        "\"It is even in a video game,\" said the Master.",
-                        "\"Is the Tao in the <TT>DOS</TT> for a personal computer?\" asked the novice.",
-                        "The Master coughed and shifted his position slightly.  \"The lesson is over for today,\" he said."
+                        "A manager was about to be fired, but a programmer who worked for him wrote a new program that became popular and sold well.  As a result, the manager retained his job.",
+                        "The manager tried to give the programmer a bonus, but the programmer refused it, saying, \"I wrote the program because I thought it was an interesting concept, and thus I expect no reward.\"",
+                        "The manager upon hearing this remarked, \"This programmer, though he holds a position of small esteem, understands well the proper duty of an employee.  Let us promote him to the exalted position of management consultant!\"",
+                        "But when told this, the programmer once more refused, saying, \"I exist so that I can program.  If I were promoted, I would do nothing but waste everyone's time.  Can I go now?  I have a program that I am working on.\""
                     ],
                     "type": "plain"
                 }
@@ -110,10 +124,8 @@ export const selectedBook = {
             "stanzas": [
                 {
                     "lines": [
-                        "Prince Wang's programmer was coding software.  His fingers danced upon the keyboard.  The program compiled without and error message, and the program ran like a gentle wind.",
-                        "\"Excellent!\"  the Prince exclaimed.  \"Your technique is faultless!\"",
-                        "\"Technique?\"  said the programmer, turning from his terminal, \"What I follow is Tao -- beyond all techniques!  When I first began to program, I would see before me the whole problem in one mass.  After three years, I no longer saw this mass.  Instead, I used subroutines. But now I see nothing.  My whole being exists in a formless void.  My senses are idle.  My spirit, free to work without a plan, follows its own instinct.  In short, my program writes itself.  True, sometimes there are difficult problems.  I see them coming, I slow down, I watch silently.  Then I change a single line of code and the difficulties vanish like puffs of idle smoke.  I then compile the program.  I sit still and let the joy of the work fill my being.  I close my eyes for a moment and then log off.\"",
-                        "Prince Wang said, \"Would that all of my programmers were as wise!\""
+                        "A manager went to his programmers and told them: \"As regards to your work hours: you are going to have to come in at nine in the morning and leave at five in the afternoon.\"  At this, all of them became angry and several resigned on the spot.",
+                        "So the manager said: \"All right, in that case you may set your own working hours, as long as you finish your projects on schedule.\"  The programmers, now satisfied, began to come in at noon and work to the wee hours of the morning."
                     ],
                     "type": "plain"
                 }

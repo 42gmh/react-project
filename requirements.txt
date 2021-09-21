@@ -1,0 +1,44 @@
+Must use React -- DONE
+  -- Whole app
+
+Must use Redux or Context API -- DONE
+  -- Using the Context API
+
+At least one child component must access the global state -- DONE
+  -- NavBar reads donated state
+  -- BookList reads the bookSummary object from the context
+  -- BookSummary invokes a function on the context object when a book is selected
+  -- Book reads the specific book selected by the user
+
+At least one child component must update the global state -- DONE
+  -- About page will update the donated state after user donates
+  -- BookSummary sets the book selected by the user when it is clicked
+
+Must use React Router and have at least 3 routes -- DONE
+  -- /, /book, /about, and default
+
+Must use a UI Framework: -- React Bootstrap, etc -- DONE -- Material UI -- Semantic UI 
+  -- Bootstrap
+
+Have an API call -- DONE
+  -- onComponentDidMount invokes my express.js server to get the list of book summaries 
+      in the Tao of Programming
+  -- BookSummary, when clicked, fetches the details for the book from the same express.js server
+
+Store information from your API call into global state (Redux or Context API) -- DONE
+  -- Both of the above store the data fetched in the global state
+
+Must include functioning Payment Method -- PENDING
+  -- Add a Donate button to the About page
+
+===========================================================
+
+NavBar -- Icon/Title/About
+  Icon/Title route to "home"
+
+Home -- Lists the books within the Tao of Programming along with the epigraph
+  -- selecting one takes you to the books contents
+
+Book Details -- Shows the contents for the book. 
+
+About -- Attribution, project details, and a Donate button

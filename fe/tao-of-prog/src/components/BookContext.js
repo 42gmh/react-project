@@ -35,7 +35,7 @@ export default class BookContextProvider extends Component {
 
         // fetch the data via an api call
         console.log("Fetching the books...");
-        if(true === process.env.REACT_APP_USE_TEST_DATA){
+        if("true" === process.env.REACT_APP_USE_TEST_DATA){
             this.loadTestBookSummaries();
         }
         else {
@@ -54,7 +54,7 @@ export default class BookContextProvider extends Component {
 
         // make an api call to fetch a book
         console.log("Fetching book: " + booknum);
-        if(true === process.env.REACT_APP_USE_TEST_DATA){
+        if("true" === process.env.REACT_APP_USE_TEST_DATA){
             this.loadTestBook();
         }
         else {

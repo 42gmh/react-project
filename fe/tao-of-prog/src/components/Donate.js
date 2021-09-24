@@ -10,9 +10,10 @@ const Donate = () => (
             return ( 
                 <div className="card px-5 mx-3 mb-3">
                     <div className="card-body">
-                        <h3 className="card-title">Donate!</h3>
+                        <h3 className="card-title">Donate! (For Test/Demo Purpose only)</h3>
                         <div className="card-text">
-                            <p>Your donations go a long way to spreading the Tao of Programming to programmers everywhere!</p>
+                            <p className="bg-warning text-center">This is a test system -- please do not use a real PayPal account!</p>
+                            <p>Your fake donations go a long way to spreading the Tao of Programming to programmers everywhere!</p>
                             <p>You can make a difference!</p>
                             <p className="bg-warning text-center">This is a test system -- please do not use a real PayPal account!</p>
                             <p>Please select your donation amount:</p>

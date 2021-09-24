@@ -117,7 +117,7 @@ export default class BookContextProvider extends Component {
 
     onPayPalSuccess = (payment) => {
         console.log("onPayPalSuccess:", payment);
-        this.onPayPalResult(false, DONATION_RESULTS.SUCCESS, payment);
+        this.onPayPalResult(true, DONATION_RESULTS.SUCCESS, payment);
     }
 
     onPayPalCancel = (payment) => {

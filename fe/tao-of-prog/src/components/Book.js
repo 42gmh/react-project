@@ -9,7 +9,7 @@ const Book = () => (
         ({selectedBook}) => {
 
             return ( null === selectedBook ? <h1>Loading...</h1> :
-                <div className = "h-auto bg-dark py-3">
+                <div className = "bg-dark py-3">
                     <BookSummary key={selectedBook.booknum} book={selectedBook}/>
                     {
                         selectedBook.sections.map(aSection => {

@@ -9,7 +9,7 @@ const BookSummary = ({book}) => (
                 console.log("BookSummary:", value);
                 return (
                     <Link to="/book" className="text-decoration-none link-dark">
-                        <div className="h-100 card px-5 mx-3 mb-3" onClick={() => value.handleBookSelection(book.booknum)}>
+                        <div className="card px-5 mx-3 mb-3" onClick={() => value.handleBookSelection(book.booknum)}>
                             <div className="card-body">
                                 <h3 className="card-title">{book.title}</h3>
                                     <blockquote className="blockquote mb-0">

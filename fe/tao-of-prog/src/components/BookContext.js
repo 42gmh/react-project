@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 
 import { selectedBook, testData } from '../test';
 
+const DONATION_RESULTS = {
+    SUCCESS : "success",
+    CANCELLED : "cancelled",
+    ERRORED : "errored"   
+}
+
 const BookContext = React.createContext();
 
 const serverURL =
@@ -14,7 +20,9 @@ export default class BookContextProvider extends Component {
     state = {
         booksSummary: null,
         selectedBook: null,
-        donated: true
+        donated: false,
+        donationAmt: 0,
+        donationResult: null
     }
 
     componentDidMount() {
@@ -107,11 +115,57 @@ export default class BookContextProvider extends Component {
         );
     }
 
+    onPayPalSuccess = (payment) => {
+        console.log("onPayPalSuccess:", payment);
+        this.onPayPalResult(false, DONATION_RESULTS.SUCCESS, payment);
+    }
+
+    onPayPalCancel = (payment) => {
+        console.log("onPayPalCancel:", payment);
+        this.onPayPalResult(false, DONATION_RESULTS.CANCELLED, payment);
+    }
+
+    onPayPalError = (payment) => {
+        console.log("onPayPalError:", payment);
+        this.onPayPalResult(false, DONATION_RESULTS.ERRORED, payment);
+    }
+
+    onPayPalResult = (donated, result, payment) => {
+        console.log(`onPayPalResult donated result payment: ${donated} ${result} ${payment}`);
+        this.setState(
+            () => {
+                return {
+                    ...this.state,
+                    donated: donated,
+                    donationResult: result
+                }
+            }
+        )
+    }
+
+    handleSelectDonationAmt = (amount) => {
+        console.log("donation selected:", amount);
+        this.setState(
+            () => {
+                return {
+                    ...this.state,
+                    donationAmt: amount
+                }
+            }
+        );
+    }
+
     render() {
         return (
             <BookContext.Provider value={{
                 ...this.state, 
-                handleBookSelection : this.handleBookSelection
+                handleBookSelection : this.handleBookSelection,
+                handleSelectDonationAmt: this.handleSelectDonationAmt,
+                paypalHandler: {
+                    onPayPalCancel : this.onPayPalCancel,
+                    onPayPalError : this.onPayPalError,
+                    onPayPalSuccess : this.onPayPalSuccess
+                }
               }}>
     
                 {this.props.children}
@@ -122,4 +176,4 @@ export default class BookContextProvider extends Component {
 
 const BookContextConsumer = BookContext.Consumer;
 
-export { BookContextProvider, BookContextConsumer };
+export { BookContextProvider, BookContextConsumer, DONATION_RESULTS };

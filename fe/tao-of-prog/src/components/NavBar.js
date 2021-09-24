@@ -14,7 +14,8 @@ const NavBar = () => (
                         className="navbar-brand img-fluid"/>
                     </Link>
                     <Link to="/" className="link-dark text-decoration-none">
-                        <h4>The Tao of Programming</h4>
+                        <h4>The Tao of Programming</h4> 
+                        <h6>translated by Geoffrey James</h6>
                     </Link>
                     <Link to="/about" className="ms-auto link-dark text-decoration-none">
                         <h4>About</h4>

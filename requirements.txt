@@ -28,7 +28,7 @@ Have an API call -- DONE
 Store information from your API call into global state (Redux or Context API) -- DONE
   -- Both of the above store the data fetched in the global state
 
-Must include functioning Payment Method -- PENDING
+Must include functioning Payment Method -- DONE
   -- Add a Donate button to the About page
 
 ===========================================================

@@ -26,7 +26,8 @@ export default class PayPalButton extends React.Component {
                 total={this.props.amountToPay} 
                 onError={this.props.payPalHandler.onPayPalError} 
                 onSuccess={this.props.payPalHandler.onPayPalSuccess} 
-                onCancel={this.props.payPalHandler.onPayPalCancel} />
+                onCancel={this.props.payPalHandler.onPayPalCancel} 
+                style={{tagline:false}} />
         );
     }
 }

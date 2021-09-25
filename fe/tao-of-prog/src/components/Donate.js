@@ -30,6 +30,7 @@ const Donate = () => (
                                 <label htmlFor="three-dollars">$3 - Your generosity overflows!</label>
                             </div>
                             <br/>
+                            <h6>PayPal Test Env - Not Live</h6>
                             <PayPalButton payPalHandler={value.paypalHandler} amountToPay={value.donationAmt}/>
                             <>
                                 <br/>

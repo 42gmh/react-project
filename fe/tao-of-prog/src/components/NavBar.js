@@ -8,7 +8,7 @@ const NavBar = () => (
     {
         ({donated}) => {
             return (
-                <nav className="navbar bg-secondary px-sm-0 px-md-3">
+                <nav className="navbar bg-secondary px-3">
                     <Link to="/">
                         <img src={yinyang} alt="Yin Yang" 
                         className="navbar-brand img-fluid"/>

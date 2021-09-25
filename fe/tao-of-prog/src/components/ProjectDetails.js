@@ -11,6 +11,7 @@ const ProjectDetails = () => {
                 <ul>
                     <li>Wrote a screen scraper to convert the online <a target = "_blank" href="https://www.mit.edu/~xela/tao.html">Tao of Programming</a> into data served via an express.js app.</li>
                     <li>Using React Context to manage state</li>
+                    <li>Integration with PayPal Sandbox environment to mock up collecting donations.</li>
                     <li>Specifics may be found in the <a target="_blank" href="https://github.com/42gmh/react-project">project repo on GitHub</a></li>
                 </ul>                            
             </div>

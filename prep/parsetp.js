@@ -194,39 +194,6 @@ async function processLineByLine() {
 
         continue;
     }
-
-/*
-    // if(line.match(/<BLOCKQUOTE>/)) {
-    //     theContext.whereAmI = WHERE_BLOCKQUOTE;
-
-    //     if(theContext.stanza)
-    //     {
-    //         theContext.aSection.stanzas.push(theContext.stanza);
-    //         theContext.stanza = null;
-    //     }
-
-    //     theContext.stanza = {
-    //         type: "block",
-    //         text: ""
-    //     };
-    // }
-
-    // if(line.match(/<BLOCKQUOTE>/)) {
-    //     theContext.whereAmI = WHERE_BLOCKQUOTE;
-
-    //     if(theContext.stanza)
-    //     {
-    //         theContext.aSection.stanzas.push(theContext.stanza);
-    //         theContext.stanza = null;
-    //     }
-
-    //     theContext.stanza = {
-    //         type: "block",
-    //         text: ""
-    //     };
-    // }
-
-*/
 }
 
     // console.log("b");

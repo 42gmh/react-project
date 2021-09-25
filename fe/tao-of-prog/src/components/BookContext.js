@@ -26,15 +26,15 @@ export default class BookContextProvider extends Component {
     }
 
     componentDidMount() {
-        console.log("Component Did Mount...", this.state);
+        // console.log("Component Did Mount...", this.state);
 
         if(null != this.state.booksSummary) {
-            console.log("No need to re-fetch books...");
+            // console.log("componentDidMount: No need to re-fetch books...");
             return;
         }
 
         // fetch the data via an api call
-        console.log("Fetching the books...");
+        // console.log("componentDidMount: Fetching the books...");
         if("true" === process.env.REACT_APP_USE_TEST_DATA){
             this.loadTestBookSummaries();
         }
@@ -44,16 +44,16 @@ export default class BookContextProvider extends Component {
     }
 
     handleBookSelection = (booknum) => {
-        console.log("Handling book selection...");
+        // console.log("handleBookSelection: Handling book selection...");
 
         if(null != this.state.selectedBook &&
             booknum === this.state.selectedBook.booknum) {
-            console.log("No need to re-fetch book: ", booknum);
+            // console.log("handleBookSelection: No need to re-fetch book: ", booknum);
             return;
         }
 
         // make an api call to fetch a book
-        console.log("Fetching book: " + booknum);
+        // console.log("handleBookSelection: Fetching book: " + booknum);
         if("true" === process.env.REACT_APP_USE_TEST_DATA){
             this.loadTestBook();
         }
@@ -89,7 +89,7 @@ export default class BookContextProvider extends Component {
     }
 
     loadTestBook() {
-        console.log("USING TEST DATA: loadTestBook");
+        // console.log("USING TEST DATA: loadTestBook");
 
         this.setState(
             () => {
@@ -97,41 +97,39 @@ export default class BookContextProvider extends Component {
                     ...this.state,
                     selectedBook: selectedBook
                 };
-            },
-            () => console.log("STATE AFTER componentDidMount", this.state)
+            }
         );
     }
 
     loadTestBookSummaries() {
-        console.log("USING TEST DATA: loadTestBooks");
+        // console.log("USING TEST DATA: loadTestBooks");
         this.setState(
             () => {
                 return {
                     ...this.state,
                     booksSummary: testData
                 };
-            },
-            () => console.log("STATE AFTER componentDidMount", this.state)
+            }
         );
     }
 
     onPayPalSuccess = (payment) => {
-        console.log("onPayPalSuccess:", payment);
+        // console.log("onPayPalSuccess:", payment);
         this.onPayPalResult(true, DONATION_RESULTS.SUCCESS, payment);
     }
 
     onPayPalCancel = (payment) => {
-        console.log("onPayPalCancel:", payment);
+        // console.log("onPayPalCancel:", payment);
         this.onPayPalResult(false, DONATION_RESULTS.CANCELLED, payment);
     }
 
     onPayPalError = (payment) => {
-        console.log("onPayPalError:", payment);
+        // console.log("onPayPalError:", payment);
         this.onPayPalResult(false, DONATION_RESULTS.ERRORED, payment);
     }
 
     onPayPalResult = (donated, result, payment) => {
-        console.log(`onPayPalResult donated result payment: ${donated} ${result} ${payment}`);
+        // console.log(`onPayPalResult donated result payment: ${donated} ${result} ${payment}`);
         this.setState(
             () => {
                 return {
@@ -144,7 +142,7 @@ export default class BookContextProvider extends Component {
     }
 
     handleSelectDonationAmt = (amount) => {
-        console.log("donation selected:", amount);
+        // console.log("donation selected:", amount);
         this.setState(
             () => {
                 return {

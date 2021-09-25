@@ -7,8 +7,6 @@ import BookContextProvider from './components/BookContext';
 
 require('dotenv').config();
 
-console.log('ENV ENV ENV:', process.env);
-
 ReactDOM.render(
   <BookContextProvider>
     <Router>

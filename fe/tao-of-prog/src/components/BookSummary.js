@@ -6,7 +6,7 @@ const BookSummary = ({book}) => (
         <BookContextConsumer>
         {
             (value) => {
-                console.log("BookSummary:", value);
+                // console.log("BookSummary:", value);
                 return (
                     <Link to="/book" className="text-decoration-none link-dark">
                         <div className="card px-5 mx-3 mb-3" onClick={() => value.handleBookSelection(book.booknum)}>

@@ -6,7 +6,7 @@ const BooksList = () => (
     <BookContextConsumer> 
     {
         ({booksSummary}) => {
-            console.log("BooksList:", booksSummary);
+            // console.log("BooksList:", booksSummary);
 
             return (
                 null === booksSummary ? <h1>Loading...</h1> :

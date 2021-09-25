@@ -7,8 +7,13 @@ For my project, I decided to implement a React version of [The Tao of Programmin
 This project has 3 main parts:
 1. A screen-scraper/parser that translates the [online HTML Tao of Programming](https://www.mit.edu/~xela/tao.html) into json. This may be found in the /prep folder.
 2. An express.js backend that serves up the aforementiond Tao json. This may be found in the /be folder.
-3. A React frontend that uses the exposed enpoints of the express backend to fetch the book summary listing as well as specific book contents selected by the user. This may be found in the /fe/tao-of-prog folder.
+3. A React frontend that makes API calls to the endpoints of the express backend to fetch the book summary listing as well as specific book contents selected by the user. This may be found in the /fe/tao-of-prog folder.
+
+Features of this project include:
+- Using React Context to manage state.
+- Integration with PayPal's Sandbox environement via the [react-paypal-express module](https://www.npmjs.com/package/react-paypal-express-checkout).
+- Using Bootstrap for styling.
 
 It front end and backend have been deployed to an AWS EC2 instance at [gregreact.xyz](https://gregreact.xyz/).
 
-Within each of the folders listed above, run npm install in order to fetch the project dependancies.
+Within each of the folders listed above, run "npm install" in order to fetch the project dependancies.
